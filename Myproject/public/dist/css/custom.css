@@ -1,0 +1,79 @@
+.trash-highlight{
+    background-color:yellow;
+}
+.success-float {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    border-radius: 100px;
+    padding: 20px;
+    background: #89E894;
+    z-index: 5005;
+    opacity: 0;
+     -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.success-show {
+    opacity: 1;
+}
+#patientsTable tbody tr {
+    cursor: pointer;
+}
+#patientsTable tbody tr:hover {
+    background-color: cornflowerblue;
+}
+.content-hide {
+    position: absolute;
+    -webkit-animation: Move_right 2s; /* Safari 4+ */
+    -moz-animation:    Move_right 2s; /* Fx 5+ */
+    -o-animation:      Move_right 2s; /* Opera 12+ */
+    animation:         Move_right 2s; /* IE 10+, Fx 29+ */
+}
+.content-show {
+    position: absolute;
+    -webkit-animation: Move_bottom 1s;
+    -moz-animation: Move_bottom 1s;
+    -o-animation: Move_bottom 1s;
+    animation: Move_bottom 1s;
+    animation-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}
+
+/***** Animations ******/
+
+/***** Move LEFT --> RIGHT ******/
+
+@-webkit-keyframes Move_right {
+  0%   { right: 5px; }
+  100% { right: -1500px; }
+}
+@-moz-keyframes Move_right {
+  0%   { right: 5px; }
+  100% { right: -1500px; }
+}
+@-o-keyframes Move_right {
+  0%   { right: 5px; }
+  100% { right: -1500px; }
+}
+@keyframes Move_right {
+  0%   { right: 5px; }
+  100% { right: -1500px; }
+}
+
+/***** Move TOP --> BOTTOM ******/
+
+@-webkit-keyframes Move_bottom {
+  0%   { top: -800px; }
+  100% { top: 50px; }
+}
+@-moz-keyframes Move_bottom {
+  0%   { top: -800px; }
+  100% { top: 50px; }
+}
+@-o-keyframes Move_bottom {
+  0%   { top: -800px; }
+  100% { top: 50px; }
+}
+@keyframes Move_bottom {
+  0%   { top: -800px; }
+  100% { top: 50px; }
+}
